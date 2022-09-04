@@ -1,0 +1,111 @@
+<!DOCTYPE >
+
+<html lang="en">
+
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+     <title>My Resume</title>
+     <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+     <link type="text/css" rel="stylesheet" href="/css/resume.css"/>
+
+</head>
+
+
+<body >
+
+   <div id="header">
+
+<p id="name" >Yukta Agrawal</p><br><br><br>
+        
+           <p id="email" >agr.yukta@gmail.com| </p>
+           <p id="no" >9111718234  </p>
+     </div>
+     <div class="left">
+     </div>
+     <div class="right">
+               
+             <h3>About Me</h3>
+            <p>
+                Full Stack Web Developer proficient in Fundamentals front-end Languages and server-side Languages.Familiar with wide range of Programming utilities and languages.<br> Collaborative team player with excellent technical abilities.
+            </p>
+            
+            <h3>Educational Qualifications</h3>
+            <table>
+                <thead>
+                <tr id="heading">
+                    <td>Degree</td>
+                    <td>Institute</td>
+                    <td>Percentage / CGPA</td>
+                    <td>Year</td>
+                </tr>
+            </thead>
+        </thead>
+        <tbody>
+        <tr th:each="e : ${education}">
+            
+            <td><span th:text="${e.course}"> Course </span></td>
+            <td><span th:text="${e.institute}"> Institute </span></td>
+            <td><span th:text="${e.percentage}"> Percentage/CGPA </span></td>
+            <td><span th:text="${e.years}"> Years </span></td>
+        </tr>
+        </tbody>
+
+            </table>
+            <h3> Projects</h3>
+            <table>
+                <table>
+                    <thead>
+                    <tr id="heading">
+                        <td>Sr.NO</td>
+                        <td>Name</td>
+                        <td>Technology Used</td>
+                        <td>Desciption</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="p : ${projects}">
+                            <td><span th:text="${p.id}"> Number </span></td>
+                            <td><span th:text="${p.name}"> Name </span></td>
+                            <td><span th:text="${p.technology}"> technology </span></td>
+                            <td><span th:text="${p.description}"> Project </span></td>
+                        </tr>
+                        </tbody>
+            </table>
+
+
+            
+            <h3>Certifications / Awards:</h3>
+            <p>
+            <ul>
+                <li>Patent for Smart Shoe Sole.</li>
+                    <li>My project - Smart shoe sole was selected in top 5 in Jatayu Competition by Virtusa.</li>
+                    <li>Earn MTA Badge in Java.</li>
+                    <li>Programming for Everybody - Getting Started with Python in Coursera</li>
+                    <li>Microsoft Technology Associate - Introduction to Programming with Java</li>
+            </ul>
+            </p>
+            <h3>Personal Information:</h3>
+            <p>
+            <ul>
+               
+                <li>
+                <span id="course-name">Languages Known:</span>English, Hindi, Gujarati and Sindhi</li>
+                <li>
+                <span id="course-name">Hobbies:</span>I love reading Finance and IT related books / magazines, playing Chess, swimming, listening music, surfing Internet, self-learning through e-courses.</li> </ul>
+            </p>
+            
+            
+     </div>
+           
+            
+        </dl>
+        <div class="clear"></div>
+        <br/>
+        <br/>
+    
+    </div>
+
+</body>
+
+</html>
